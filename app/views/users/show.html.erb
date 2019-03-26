@@ -8,6 +8,7 @@
 <h2>avatar</h2>
 <% if @user.avatar.attached? %>
   <%= image_tag(@user.avatar) %>
+  <%= image_tag @user.avatar.variant(resize: "100x100") %>
 <% end %>
 
 </p>
