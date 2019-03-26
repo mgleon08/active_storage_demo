@@ -19,6 +19,7 @@
   <% @user.documents.each_with_index do |doc, i| %>
     <p>
     <%= link_to("Document #{i}", rails_blob_path(doc, disposition: "attachment")) %>
+    <%= image_tag @user.avatar.variant(resize: "100x100") %>
     </p>
   <% end %>
   </p>
